@@ -105,7 +105,7 @@ nav h1 a {
 }
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
-  width: 96%;
+  width: 98%;
   height: 100%;
   background-color: #3397DB;
   align-items: center;
@@ -144,7 +144,7 @@ nav h1 a {
   font-family: Arial,sans-serif;
   margin: 15px 5%;
   min-height: 350px;
-  padding: 0 5% 25px;
+  padding: 10px 5% 15px;
   text-align: left;
   width: auto;
 }

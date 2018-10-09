@@ -1,0 +1,69 @@
+/*
+SMALL TABLET
+*/
+@media screen and (min-width: 700px) {
+	nav h1 {
+		padding: 20px;
+	}
+	nav h1 a {
+		font-size: 20pt;
+	}
+	.filter-options {
+		padding: 1%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.filter-options select {
+		margin: 5px 10px;
+	}
+	#restaurants-list {
+		padding: 20px 10% 50px;
+	}
+	#restaurants-list li {
+		margin: 30px 10%
+		padding: 25px 5%;
+	}
+	#restaurants-list li h1 {
+		font-size: 16pt;
+	}
+	#restaurants-list li a {
+		font-size: 12pt;
+	}
+	#restaurants-list p {
+		font-size: 12pt;
+	}
+}
+
+/*
+LARGE TABLET
+*/
+@media screen and (min-width: 1000px) {
+	nav h1 {
+		padding: 15px;
+	}
+	nav h1 a {
+		font-size: 24pt;
+	}
+	.filter-options h2 {
+		font-size: 1.4rem;
+	}
+	.filter-options select {
+		font-size: 13pt;
+		margin: 5px 20px;
+	}
+	#restaurants-list p {
+		font-size: 14pt;
+	}
+	#footer {
+	  font-size: 10pt;
+	}
+}
+
+/*
+LAPTOP
+*/
+@media screen and (min-width: 1400px) {
+	#restaurants-list li {
+		margin: 30px 24%;
+	}
+}
