@@ -8,8 +8,11 @@ SMALL TABLET
 	nav h1 a {
 		font-size: 20pt;
 	}
+	#footer {
+		font-size: 10pt;
+	}
 	.filter-options {
-		padding: 1%;
+		padding: 2%;
 		display: flex;
 		flex-wrap: wrap;
 	}
@@ -31,6 +34,27 @@ SMALL TABLET
 	}
 	#restaurants-list p {
 		font-size: 12pt;
+	}
+	.inside #map-container {
+		height: 350px;
+	}
+	#restaurant-container {
+		padding: 475px 10% 40px;
+	}
+	#breadcrumb li {
+		font-size: 14pt;
+	}
+	#restaurant-cuisine {
+		font-size: 16pt;
+	}
+	#restaurant-address, #restaurant-hours tr td {
+		font-size: 14pt;
+	}
+	.reviewer-name, .review-date, .review-rating {
+		font-size: 14pt;
+	}
+	.review-comment {
+		font-size: 13pt;
 	}
 }
 
@@ -54,16 +78,20 @@ LARGE TABLET
 	#restaurants-list p {
 		font-size: 14pt;
 	}
-	#footer {
-	  font-size: 10pt;
-	}
 }
 
 /*
 LAPTOP
 */
 @media screen and (min-width: 1400px) {
+	#restaurants-list {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-evenly;
+		padding: 20px 5% 50px;
+	}
 	#restaurants-list li {
-		margin: 30px 24%;
+		margin: 40px 20px;
+		padding: 30px 40px;
 	}
 }
