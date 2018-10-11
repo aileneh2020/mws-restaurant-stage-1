@@ -94,4 +94,17 @@ LAPTOP
 		margin: 40px 20px;
 		padding: 30px 40px;
 	}
+	.inside {
+		background-color: #f3f3f3;
+	}
+	.inside #breadcrumb {
+		background-color: #ccc;
+	}
+	.inside #maincontent {
+		width: 100%;
+	}
+	.inside #map-container {
+		width: 80%;
+		left: 10%;
+	}
 }
