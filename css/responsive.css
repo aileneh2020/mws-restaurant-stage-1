@@ -104,7 +104,10 @@ LAPTOP
 		width: 100%;
 	}
 	.inside #map-container {
-		width: 80%;
+		width: 60%;
 		left: 10%;
+	}
+	.inside #restaurant-container, #reviews-container {
+		width: 60%;
 	}
 }
