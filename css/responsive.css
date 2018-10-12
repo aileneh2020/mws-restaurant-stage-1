@@ -88,11 +88,13 @@ LAPTOP
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-evenly;
+		align-content: flex-start;
 		padding: 20px 5% 50px;
 	}
 	#restaurants-list li {
 		margin: 40px 20px;
 		padding: 30px 40px;
+		width: 400px;
 	}
 	.inside {
 		background-color: #f3f3f3;
