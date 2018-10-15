@@ -5,6 +5,17 @@ var newMap
 var markers = []
 
 /**
+ * Register service worker
+ */
+if (navigator.serviceWorker) {
+  navigator.serviceWorker.register('/sw.js', {scope: '/'}).then(function(reg) {
+    console.log('Service Worker registered successfully. Scope is ' + reg.scope);
+  }).catch(function(error) {
+    console.log('Registration failed with ' + error);
+  });
+}
+
+/**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -148,6 +159,7 @@ createRestaurantHTML = (restaurant) => {
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
+  image.alt = `Picture of ${restaurant.name}`;
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 
@@ -165,6 +177,7 @@ createRestaurantHTML = (restaurant) => {
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
+  more.setAttribute('aria-label', `Restaurant details for ${restaurant.name}`);
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more)
 
@@ -186,15 +199,3 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 
 }
-/*
- addMarkersToMap = (restaurants = self.restaurants) => {
-  restaurants.forEach(restaurant => {
-    // Add marker to the map
-    const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.map);
-    google.maps.event.addListener(marker, 'click', () => {
-      window.location.href = marker.url
-    });
-    self.markers.push(marker);
-  });
-}
-*/
