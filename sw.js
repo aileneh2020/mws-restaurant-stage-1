@@ -1,8 +1,10 @@
 const appName = 'restaurant-review';
-const staticCacheName = appName + '-v3';
+const staticCacheName = appName + '-v1';
 
 
-// Once service worker is installed, add array of file names to cache
+/**
+ * Once service worker is installed, add array of file names to cache.
+ */
 self.addEventListener('install', function(event) {
 	event.waitUntil(
 		caches.open(staticCacheName).then(function(cache) {
@@ -32,7 +34,9 @@ self.addEventListener('install', function(event) {
 });
 
 
-// Remove old versions of cache
+/**
+ * Remove old versions of cache.
+ */
 self.addEventListener('activate', function(event) {
 	event.waitUntil(
 		caches.keys().then(function(keyList) {
@@ -46,11 +50,16 @@ self.addEventListener('activate', function(event) {
 });
 
 
-// If event request does not exist in cache then fetch it
+/**
+ * If event request does not exist in cache then fetch it.
+ */
 self.addEventListener('fetch', function(event) {
 	const urlRequest = new URL(event.request.url);
 
+	// Respond to requests for this app only, not third party apps
 	if (urlRequest.origin === location.origin) {
+		// Ignore search parameters in url and respond with restaurant.html if
+		// pathname begins with '/restaurant.html'
 		if (urlRequest.pathname.startsWith('/restaurant.html')) {
 			event.respondWith(caches.match('/restaurant.html'));
 			return;
@@ -64,26 +73,3 @@ self.addEventListener('fetch', function(event) {
 		})
 	);
 });
-
-/*
-			if (response) {
-				console.log('Found ' + event.request + ' in cache.');
-				return response;
-			} else {
-				// If request not found then fetch request and add to cache
-				console.log('Could not find ' + event.request + ' in cache, will fetch.');
-				return fetch(event.request);
-				.then(function(response) {
-					const cloneResponse = response.clone();
-					caches.open(staticCache).then(function(cache) {
-						cache.put(event.request, cloneResponse);
-					})
-					return response;
-				})
-				.catch(function(error) {
-					console.log(error);
-				});
-			}
-		})
-	);
-}); */

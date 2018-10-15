@@ -1,6 +1,7 @@
-/*
-SMALL TABLET
-*/
+/* Responsive CSS */
+
+/* ========== SMALL TABLET ========== */
+
 @media screen and (min-width: 700px) {
 	nav h1 {
 		padding: 20px;
@@ -25,6 +26,7 @@ SMALL TABLET
 	#restaurants-list li {
 		margin: 30px 10%
 		padding: 25px 5%;
+		transition: .5s;
 	}
 	#restaurants-list li h1 {
 		font-size: 16pt;
@@ -58,10 +60,9 @@ SMALL TABLET
 	}
 }
 
-/*
-LARGE TABLET
-*/
-/*@media screen and (min-width: 1000px) {
+/* ========== LARGE TABLET AND LAPTOP ========== */
+
+@media screen and (min-width: 1000px) {
 	nav h1 {
 		padding: 15px;
 	}
@@ -75,15 +76,6 @@ LARGE TABLET
 		font-size: 13pt;
 		margin: 5px 20px;
 	}
-	#restaurants-list p {
-		font-size: 14pt;
-	}
-}*/
-
-/*
-LAPTOP
-*/
-@media screen and (min-width: 1000px) {
 	#restaurants-list {
 		display: flex;
 		flex-flow: row wrap;
@@ -91,10 +83,14 @@ LAPTOP
 		align-content: flex-start;
 		padding: 20px 5% 50px;
 	}
+	#restaurants-list p {
+		font-size: 14pt;
+	}
 	#restaurants-list li {
 		margin: 40px 20px;
 		padding: 30px 40px;
-		width: 400px;
+		width: 350px;
+		transition: .5s;
 	}
 	.inside {
 		background-color: #f3f3f3;

@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Normalize.css for better cross-browser consistency -->
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-  <!-- Main CSS file -->
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" type="text/css" href="css/responsive.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
@@ -15,9 +14,10 @@
 
 <body class="inside">
   <header>
+    <!-- Skip Link -->
     <a href="#restaurant-name" class="skip-link">Skip to Main Content</a>
     <nav>
-      <h1><a href="/">Restaurant Review</a></h1>
+      <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
     <ul id="breadcrumb">
       <li><a href="/">Home</a></li>
@@ -26,10 +26,12 @@
 
   <!-- Main Content -->
   <main id="maincontent">
+
     <!-- Map -->
     <section id="map-container" role="application" aria-label="Mapbox Maps">
       <div id="map" aria-labeledby="map-container"></div>
     </section>
+
     <!-- Restaurant Info -->
     <section id="restaurant-container" role="contentinfo" aria-label="Restaurant Information">
       <h1 id="restaurant-name"></h1>
@@ -38,6 +40,7 @@
       <p id="restaurant-address"></p>
       <table id="restaurant-hours"></table>
     </section>
+
     <!-- Reviews -->
     <section id="reviews-container" role="contentinfo" aria-label="Restaurant Reviews">
       <ul id="reviews-list"></ul>
